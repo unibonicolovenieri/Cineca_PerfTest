@@ -1,0 +1,22 @@
+/var/spool/slurmd/job15077474/slurm_script: riga 30: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 31: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 32: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 33: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 34: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 37: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 38: logs/perf_outputs.txt: File o directory non esistente
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        login08
+   #processes:  1
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+/var/spool/slurmd/job15077474/slurm_script: riga 44: kill: (2213348) - Nessun processo corrisponde
+/var/spool/slurmd/job15077474/slurm_script: riga 47: logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15077474/slurm_script: riga 48: logs/perf_outputs.txt: File o directory non esistente

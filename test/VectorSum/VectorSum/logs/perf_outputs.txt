@@ -1,0 +1,8 @@
+Job Name: VectorSumMPI
+Nodes Used: 1 NumCPUs
+Job ID: 15077772
+Start Time: mar 22 apr 2025, 12.43.24, CEST
+----------------------------------------
+Running perf after MPI...
+End Time: mar 22 apr 2025, 12.43.24, CEST
+----------------------------------------

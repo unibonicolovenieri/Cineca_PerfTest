@@ -1,0 +1,16 @@
+/var/spool/slurmd/job15077153/slurm_script: riga 18: cd: /home/nvenieri/VectorSum/MPIscripts: File o directory non esistente
+cc1: fatal error: mpi_vector_sum.c: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        login08
+   #processes:  1
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+/var/spool/slurmd/job15077153/slurm_script: riga 48: 2197764 Terminato               perf stat -e task-clock,context-switches,cpu-migrations,page-faults,cycles,instructions,branches,branch-misses -p $$ >> $PERF_OUTPUT 2>&1
