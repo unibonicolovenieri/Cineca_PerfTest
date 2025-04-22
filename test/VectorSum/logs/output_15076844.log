@@ -1,3 +1,0 @@
-ERROR: Unable to locate a modulefile for 'mpi/openmpi-x86_64'
-/var/spool/slurmd/job15076844/slurm_script: riga 15: cd: /path/to/VectorSum/MPIscripts: File o directory non esistente
-/var/spool/slurmd/job15076844/slurm_script: riga 18: mpirun: comando non trovato
