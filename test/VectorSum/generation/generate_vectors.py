@@ -1,7 +1,7 @@
 import random
 
 def generate_vector(size):
-    return [random.randint(1, 100) for _ in range(size)]
+    return [round(random.uniform(1.0, 100.0), 4) for _ in range(size)]
 
 def save_vector(filename, vector):
     with open(filename, 'w') as f:
@@ -16,4 +16,5 @@ if __name__ == "__main__":
     save_vector("vector1.txt", vector1)
     save_vector("vector2.txt", vector2)
 
-    print("✅ Vettori generati e salvati in 'vector1.txt' e 'vector2.txt'")
+    print("Vettori float generati e salvati in 'vector1.txt' e 'vector2.txt'")
+
