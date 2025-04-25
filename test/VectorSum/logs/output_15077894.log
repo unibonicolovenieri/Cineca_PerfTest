@@ -1,0 +1,3 @@
+mpirun: Error: unknown option "--overload-allowed"
+Type 'mpirun --help' for usage.
+Somma totale dei vettori: 4828.7158
