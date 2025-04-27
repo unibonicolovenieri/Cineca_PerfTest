@@ -2,11 +2,10 @@
 #SBATCH --job-name=VectorSumMPI         # Nome del job
 #SBATCH --output=logs/output_%j.log     # Nome del file di output (log) nella cartella logs
 #SBATCH --ntasks=2                      # Numero di processi (MPI)
-#SBATCH --nodes=1                       # Numero di nodi (se necessario)
+#SBATCH --nodes=2                       # Numero di nodi (se necessario)
 #SBATCH --time=00:10:00                 # Tempo massimo di esecuzione
 #SBATCH --mail-type=BEGIN,END,FAIL      # Notifiche quando il job inizia, finisce, o fallisce
 #SBATCH --mail-user=nicolo.venieri2@studio.unibo.it  # La tua email
-#SBATCH --partition=boost_usr_prod     # Partizione da utilizzare (sostituisci con quella che desideri)
 
 # Crea la cartella logs se non esiste già
 mkdir -p logs
@@ -15,11 +14,13 @@ mkdir -p logs
 module load gcc/12.2.0
 module load openmpi/4.1.6--gcc--12.2.0
 
-# Naviga alla cartella dove c'è il codice MPI (usa la tua directory FAST)
+# Naviga alla cartella dove c'è il codice MPI (usa la directory FAST)
 cd $FAST/VectorSum/MPIscripts  # La cartella dove hai copiato i tuoi script
 
 # Compila il programma MPI
-mpirun --bind-to core --overload-allowed -np 2 ./mpi_vector_sum
+mpi -np 2 ./mpi_vector_sum
+perf stat mpiexec -n 2 ./mpi_vector_sum
+mpiexec -n 2 perf stat ./mpi_vector_sum
 
 # Crea un file per l'output di perf
 PERF_OUTPUT="$FAST/VectorSum/logs/perf_outputs.txt"

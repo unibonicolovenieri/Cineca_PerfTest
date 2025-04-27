@@ -1,0 +1,73 @@
+/var/spool/slurmd/job15204142/slurm_script: riga 21: mpi: comando non trovato
+Somma totale dei vettori: 4828.7158
+
+ Performance counter stats for 'mpiexec -n 2 ./mpi_vector_sum':
+
+            603,55 msec task-clock                #    0,386 CPUs utilized          
+              3635      context-switches          #    6,023 K/sec                  
+                29      cpu-migrations            #   48,049 /sec                   
+             13971      page-faults               #   23,148 K/sec                  
+        1985859881      cycles                    #    3,290 GHz                    
+        4140906593      instructions              #    2,09  insn per cycle         
+         930677624      branches                  #    1,542 G/sec                  
+           2421503      branch-misses             #    0,26% of all branches        
+        9270940135      slots                     #   15,361 G/sec                  
+        3835685630      topdown-retiring          #     34,5% retiring              
+        3203072548      topdown-bad-spec          #     28,8% bad speculation       
+        2300183685      topdown-fe-bound          #     20,7% frontend bound        
+        1768721985      topdown-be-bound          #     15,9% backend bound         
+
+       1,563709771 seconds time elapsed
+
+       0,076618000 seconds user
+       0,254260000 seconds sys
+
+
+Somma totale dei vettori: 4828.7158
+
+ Performance counter stats for './mpi_vector_sum':
+
+            234,22 msec task-clock                #    0,441 CPUs utilized          
+              2697      context-switches          #   11,515 K/sec                  
+                10      cpu-migrations            #   42,695 /sec                   
+              7096      page-faults               #   30,296 K/sec                  
+         771080716      cycles                    #    3,292 GHz                    
+        1095798324      instructions              #    1,42  insn per cycle         
+         241845734      branches                  #    1,033 G/sec                  
+            814982      branch-misses             #    0,34% of all branches        
+        3248263410      slots                     #   13,868 G/sec                  
+        1051311458      topdown-retiring          #     24,2% retiring              
+        1769305870      topdown-bad-spec          #     40,7% bad speculation       
+         688983053      topdown-fe-bound          #     15,8% frontend bound        
+         840455596      topdown-be-bound          #     19,3% backend bound         
+
+       0,530514108 seconds time elapsed
+
+       0,052040000 seconds user
+       0,184904000 seconds sys
+
+
+
+ Performance counter stats for './mpi_vector_sum':
+
+            254,39 msec task-clock                #    0,494 CPUs utilized          
+              2013      context-switches          #    7,913 K/sec                  
+                20      cpu-migrations            #   78,621 /sec                   
+              8390      page-faults               #   32,981 K/sec                  
+         828249190      cycles                    #    3,256 GHz                    
+        1233354005      instructions              #    1,49  insn per cycle         
+         264607298      branches                  #    1,040 G/sec                  
+            838187      branch-misses             #    0,32% of all branches        
+        3587670170      slots                     #   14,103 G/sec                  
+        1158665077      topdown-retiring          #     22,7% retiring              
+        2259621624      topdown-bad-spec          #     44,4% bad speculation       
+         671570757      topdown-fe-bound          #     13,2% frontend bound        
+        1003756642      topdown-be-bound          #     19,7% backend bound         
+
+       0,515364322 seconds time elapsed
+
+       0,076107000 seconds user
+       0,177748000 seconds sys
+
+
+Somma totale dei vettori: 4828.7158
