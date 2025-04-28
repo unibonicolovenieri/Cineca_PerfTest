@@ -1,8 +1,18 @@
+
+Job Name: VectorSumMPI
+Nodes Used: 1 NumCPUs
+Job ID: 15289426
+Start Time: lun 28 apr 2025, 16.31.14, CEST
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+End Time: lun 28 apr 2025, 16.31.14, CEST
+----------------------------------------
 Job Name: VectorSumMPI
 Nodes Used: 2 NumCPUs
-Job ID: 15204142
-Start Time: sab 26 apr 2025, 08.34.16, CEST
+Job ID: 15289434
+Start Time: lun 28 apr 2025, 16.32.09, CEST
 ----------------------------------------
-Running perf after MPI...
-End Time: sab 26 apr 2025, 08.34.17, CEST
+Running MPI program across 2 nodes with local perf monitoring (energy)...
+Somma totale dei vettori: 4828.7158
+End Time: lun 28 apr 2025, 16.32.10, CEST
 ----------------------------------------

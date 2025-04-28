@@ -33,7 +33,7 @@ echo "----------------------------------------" >> $PERF_OUTPUT
 
 # Eseguo il programma MPI su 2 nodi
 echo "Running MPI program across 2 nodes with local perf monitoring (energy)..." >> $PERF_OUTPUT
-perf stat -e power/energy-pkg/ -- mpiexec -n 2 ./mpi_vector_sum >> $PERF_OUTPUT 2>&1
+perf stat -e power/energy-pkg/ -- mpiexec -n 2 ./mpi_vector_sum | tee -a $PERF_OUTPUT
 
 # Fine test
 echo "End Time: $(date)" >> $PERF_OUTPUT
