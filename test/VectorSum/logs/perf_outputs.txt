@@ -16,3 +16,11 @@ Running MPI program across 2 nodes with local perf monitoring (energy)...
 Somma totale dei vettori: 4828.7158
 End Time: lun 28 apr 2025, 16.32.10, CEST
 ----------------------------------------
+Job Name: VectorSumMPI
+Nodes Used: 1 NumCPUs
+Job ID: 15344254
+Start Time: gio  1 mag 2025, 17.15.33, CEST
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+End Time: gio  1 mag 2025, 17.15.33, CEST
+----------------------------------------

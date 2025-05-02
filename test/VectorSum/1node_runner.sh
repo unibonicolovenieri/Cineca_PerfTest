@@ -15,10 +15,10 @@ module load gcc/12.2.0
 module load openmpi/4.1.6--gcc--12.2.0
 
 # Mi sposto nella cartella degli script
-cd $FAST/VectorSum/MPIscripts
+cd $HOME/cineca_perftest/test/VectorSum/MPIscripts
 
 # File di output per perf
-PERF_OUTPUT="$FAST/VectorSum/logs/perf_outputs.txt"
+PERF_OUTPUT="$HOME/cineca_perftest/test/VectorSum/logs/perf_outputs.txt"
 touch $PERF_OUTPUT
 
 # Ottengo i nodi utilizzati
@@ -33,7 +33,7 @@ echo "----------------------------------------" >> $PERF_OUTPUT
 
 # Eseguo il programma MPI e monitoro energia
 echo "Running MPI program with perf monitoring (energy)..." >> $PERF_OUTPUT
-perf stat -e power/energy-pkg/ -- mpiexec -n 2 ./mpi_vector_sum | tee -a $PERF_OUTPUT
+perf stat -e power/energy-pkg/ -- mpiexec -n 2 ./mpi_perf_rank | tee -a $PERF_OUTPUT
 
 # Fine test
 echo "End Time: $(date)" >> $PERF_OUTPUT

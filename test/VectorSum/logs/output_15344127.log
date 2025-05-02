@@ -1,0 +1,29 @@
+touch: impossibile fare touch di '/leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt': File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 28: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 29: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 30: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 31: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 32: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 35: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+tee: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        login13
+   #processes:  1
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+
+ Performance counter stats for 'system wide':
+
+             33,50 Joules power/energy-pkg/                                           
+
+       0,096268209 seconds time elapsed
+
+/var/spool/slurmd/job15344127/slurm_script: riga 39: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
+/var/spool/slurmd/job15344127/slurm_script: riga 40: /leonardo/home/userexternal/nvenieri/VectorSum/logs/perf_outputs.txt: File o directory non esistente
