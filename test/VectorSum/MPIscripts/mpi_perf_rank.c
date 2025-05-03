@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#import <perf.h>
 #include <mpi.h>
 
 #define VECTOR_SIZE 50
@@ -26,6 +27,7 @@ int main(int argc, char* argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
+    /*
     // === LANCIO PERF DA OGNI RANK ===
     const char* fast_dir = getenv("FAST");
     const char* job_id = getenv("SLURM_JOB_ID");
@@ -45,6 +47,7 @@ int main(int argc, char* argv[]) {
             fprintf(stderr, "Variabili d'ambiente FAST o SLURM_JOB_ID non trovate.\n");
         }
     }
+    */
 
     // Controllo che ci siano esattamente 2 processi
     if (size != 2) {
