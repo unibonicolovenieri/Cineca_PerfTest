@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=VectorSumMPI
 #SBATCH --output=logs/output_%j.log
-#SBATCH --ntasks=2
-#SBATCH --nodes=1                # <-- UN SOLO nodo ora
+#SBATCH --ntasks-per-node=1    #Voglio che ci sia solo un  task per node e lo forzo 
+#SBATCH --nodes=2                # <-- UN SOLO nodo ora, se specifichi solo questo alloca due processori che lui pensa che usi poi se li gestisce lui
 #SBATCH --time=00:10:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=nicolo.venieri2@studio.unibo.it
-
+#SBATCH --exclusive
 # Creo cartella logs se non esiste
 mkdir -p logs
 
@@ -33,8 +33,11 @@ echo "----------------------------------------" >> $PERF_OUTPUT
 
 # Eseguo il programma MPI e monitoro energia
 echo "Running MPI program with perf monitoring (energy)..." >> $PERF_OUTPUT
-perf stat -e power/energy-pkg/ srun ./mpi_perf_rank | tee -a $PERF_OUTPUT
+perf stat -e power/energy-pkg/ -A srun ./mpi_vector_sum | tee -a $PERF_OUTPUT
 
 # Fine test
 echo "End Time: $(date)" >> $PERF_OUTPUT
 echo "----------------------------------------" >> $PERF_OUTPUT
+
+# SE ESEGUI SU UN NODO SOLO TASK PER NODE 2 E NODES 1
+#SE ESEGUI SU DUE NODI TASK PER NODES 1 E NODES 2

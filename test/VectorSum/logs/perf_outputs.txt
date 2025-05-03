@@ -24,3 +24,58 @@ Start Time: gio  1 mag 2025, 17.15.33, CEST
 Running MPI program with perf monitoring (energy)...
 End Time: gio  1 mag 2025, 17.15.33, CEST
 ----------------------------------------
+Job Name: VectorSumMPI
+Nodes Used: 1 NumCPUs
+Job ID: 15366577
+Start Time: ven  2 mag 2025, 13.47.35, CEST
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+Somma totale dei vettori: 4828.7158
+End Time: ven  2 mag 2025, 13.47.39, CEST
+----------------------------------------
+Job Name: VectorSumMPI
+Nodes Used: 1 NumCPUs
+Job ID: 15366610
+Start Time: ven  2 mag 2025, 13.50.18, CEST
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+Somma totale dei vettori: 4828.7158
+End Time: ven  2 mag 2025, 13.50.22, CEST
+----------------------------------------
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 15367092
+Start Time: ven  2 mag 2025, 16.38.23, CEST
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+Somma totale dei vettori: 4828.7158
+End Time: ven  2 mag 2025, 16.38.25, CEST
+----------------------------------------

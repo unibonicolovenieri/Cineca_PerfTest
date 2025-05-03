@@ -1,0 +1,22 @@
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+event syntax error: 'energy-cores'
+                           \___ parser error
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+Somma totale dei vettori: 4828.7158
+
+ Performance counter stats for 'system wide':
+
+           1221,97 Joules power/energy-pkg/                                           
+
+       3,892924550 seconds time elapsed
+
