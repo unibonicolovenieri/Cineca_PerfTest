@@ -1,0 +1,8 @@
+
+ Performance counter stats for 'system wide':
+
+CPU0                   177.01 Joules power/energy-pkg/                                           
+CPU32                  211.94 Joules power/energy-pkg/                                           
+
+       1.622924927 seconds time elapsed
+

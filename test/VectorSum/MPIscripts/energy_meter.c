@@ -1,13 +1,10 @@
 #include "energy_meter.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-
-static const char* zone_paths[] = {
-    [ENERGY_PKG]  = "/sys/class/powercap/intel-rapl:0/energy_uj",
-    [ENERGY_CORE] = "/sys/class/powercap/intel-rapl:0:0/energy_uj",
-    [ENERGY_DRAM] = "/sys/class/powercap/intel-rapl:0:1/energy_uj",
-    [ENERGY_PSYS] = "/sys/class/powercap/intel-rapl:1/energy_uj"
-};
+#include <unistd.h>
+#include <dirent.h>
+#include <sched.h>
 
 static long long read_energy_uj(const char* path) {
     FILE* f = fopen(path, "r");
@@ -18,14 +15,27 @@ static long long read_energy_uj(const char* path) {
     return val;
 }
 
-int energy_meter_init(energy_meter_t* m, int socket, energy_zone_t zone) {
+int get_current_socket() {
+    int cpu = sched_getcpu();
+    char path[256];
+    snprintf(path, sizeof(path), "/sys/devices/system/cpu/cpu%d/topology/physical_package_id", cpu);
+
+    FILE* f = fopen(path, "r");
+    if (!f) return -1;
+
+    int socket = -1;
+    fscanf(f, "%d", &socket);
+    fclose(f);
+    return socket;
+}
+
+int energy_meter_init_manual(energy_meter_t* m, int socket, energy_zone_t zone) {
     if (!m) return -1;
     m->socket = socket;
     m->zone = zone;
     m->start = 0;
     m->stop = 0;
 
-    // Costruzione path dinamico
     switch (zone) {
         case ENERGY_PKG:
             snprintf(m->path, sizeof(m->path),
@@ -50,6 +60,11 @@ int energy_meter_init(energy_meter_t* m, int socket, energy_zone_t zone) {
     return 0;
 }
 
+int energy_meter_init(energy_meter_t* m, energy_zone_t zone) {
+    int socket = get_current_socket();
+    if (socket < 0) return -1;
+    return energy_meter_init_manual(m, socket, zone);
+}
 
 int energy_meter_start(energy_meter_t* m) {
     m->start = read_energy_uj(m->path);
@@ -62,5 +77,5 @@ int energy_meter_stop(energy_meter_t* m) {
 }
 
 double energy_meter_joules(energy_meter_t* m) {
-    return (m->stop - m->start) / 1e6; // microjoule to joule
+    return (m->stop - m->start) / 1e6;
 }

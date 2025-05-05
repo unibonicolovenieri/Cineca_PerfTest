@@ -1,0 +1,8 @@
+Job Name: VectorSumMPI
+Job ID: 15427784
+Nodes Used: 2 NumCPUs
+Start Time: Mon May  5 13:24:13 CEST 2025
+----------------------------------------
+Running MPI energy measurement program...
+End Time: Mon May  5 13:24:18 CEST 2025
+----------------------------------------
