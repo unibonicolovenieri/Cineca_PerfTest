@@ -1,7 +1,3 @@
-Certo, ecco il file Markdown che descrive ogni dettaglio dei tre file che abbiamo creato, con una spiegazione approfondita di ciascun componente e dei vari scenari in cui vengono utilizzati.
-
----
-
 # **Documentazione del Progetto di Misurazione Energetica con MPI e RAPL**
 
 Questo progetto ha come obiettivo la misurazione del consumo energetico durante l'esecuzione di un'applicazione MPI su un sistema multi-socket, utilizzando il framework Intel RAPL (Running Average Power Limit). Vengono descritti i tre file principali che compongono il progetto:
