@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/syscall.h>
+#include <linux/perf_event.h>
+#include <asm/unistd.h>
+
+#define PERF_EVENT_OPEN_SYSCALL_NR __NR_perf_event_open
 
 #define VECTOR_SIZE 50
 
@@ -40,7 +48,32 @@ int main(int argc, char* argv[]) {
     // Vettori per ogni rank
     float vector1[VECTOR_SIZE], vector2[VECTOR_SIZE];
     float local_vector[VECTOR_SIZE / 2];
+//preambolo
+    int type = 0x17; // 23 in hex
+    long config = 0x02; // event code in hex
 
+    // Set up the perf_event_attr struct
+    struct perf_event_attr attr;
+    memset(&attr, 0, sizeof(attr));
+    attr.type = type;
+    attr.size = sizeof(struct perf_event_attr);
+    attr.config = config;
+
+    // Open the event
+    long fd = syscall(PERF_EVENT_OPEN_SYSCALL_NR, &attr, -1, 0, -1, 0);
+    if (fd == -1) {
+        perror("perf_event_open");
+        return 1;
+    }
+
+    // Read initial counter value
+    long int counter_before;
+    if (read(fd, &counter_before, sizeof(long int)) != sizeof(long int)) {
+        perror("read");
+        close(fd);
+        return 1;
+    }
+//fine preambolo
     if (rank == 0) {
         // Rank 0 legge i vettori
         read_vector(vector1_path, vector1);
@@ -87,6 +120,24 @@ int main(int argc, char* argv[]) {
         // Rank 1 manda la somma parziale a rank 0
         MPI_Send(&local_sum, 1, MPI_FLOAT, 0, 2, MPI_COMM_WORLD);
     }
+//epilogo
+    // Read the final counter value
+    long int counter_after;
+    if (read(fd, &counter_after, sizeof(long int)) != sizeof(long int)) {
+        perror("read");
+        close(fd);
+        return 1;
+    }
+
+    // Calculate energy usage
+    double scale = 2.3283064365386962890625e-10; // from energy-cores.scale
+    double energy = (counter_after - counter_before) * scale;
+    printf("Energy usage: %.9f Joules\n", energy);
+
+    // Close the event
+    close(fd);
+    return 0;
+//fine epilogo
 
     MPI_Finalize();
     return 0;

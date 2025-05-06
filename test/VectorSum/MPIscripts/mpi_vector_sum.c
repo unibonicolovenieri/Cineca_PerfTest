@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
     // Vettori per ogni rank
     float vector1[VECTOR_SIZE], vector2[VECTOR_SIZE];
     float local_vector[VECTOR_SIZE / 2];
+//preambolo
 
     if (rank == 0) {
         // Rank 0 legge i vettori
@@ -87,6 +88,7 @@ int main(int argc, char* argv[]) {
         // Rank 1 manda la somma parziale a rank 0
         MPI_Send(&local_sum, 1, MPI_FLOAT, 0, 2, MPI_COMM_WORLD);
     }
+//epilogo
 
     MPI_Finalize();
     return 0;

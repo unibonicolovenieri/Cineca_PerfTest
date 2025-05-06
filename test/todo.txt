@@ -1,0 +1,8 @@
+Perf event -a è la somma e non cambia nulla
+
+quindi perf event open te lo tieni e va bene
+
+
+
+
+- Perf stat riesce a darti il consumo di energia, ma a cosa si riferisce? Capisci anche specialmente quando il job / srun eseguo con -nodes > 1 cosa fa? Si calcola solo il nodo 1 e il secondo lo lascia perdere o se li calcola entrambi? Boh, calcolati anche con il programma mpi se riesci a stabilire dove sei. 
