@@ -90,3 +90,56 @@ Energy usage: 0.000000000 Joules
 Energy usage: 0.000000000 Joules
 End Time: Mon May  5 19:33:29 CEST 2025
 ----------------------------------------
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 15483534
+Start Time: Tue May  6 18:13:10 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+Somma totale dei vettori: 4828.7158
+Energy usage: 0.000000000 Joules
+Energy usage: 0.000000000 Joules
+End Time: Tue May  6 18:13:11 CEST 2025
+----------------------------------------
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 15484072
+Start Time: Tue May  6 18:45:14 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+Somma totale dei vettori: 4828.7158
+Energy usage: 0.000000000 Joules
+Energy usage: 0.000000000 Joules
+End Time: Tue May  6 18:45:15 CEST 2025
+----------------------------------------
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 15702583
+Start Time: Tue May 13 11:50:57 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+Energy usage: 0.000000000 Joules
+Somma totale dei vettori: 4828.7158
+Energy usage: 0.000000000 Joules
+End Time: Tue May 13 11:50:58 CEST 2025
+----------------------------------------
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 16377888
+Start Time: Wed Jun  4 12:11:55 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+Somma totale dei vettori: 4828.7158
+Energy usage: 0.0283869570121169090270996093750000000000000000000000000000000000000000000000000000000000000000000000 Joules
+Energy usage: 0.0025272546336054801940917968750000000000000000000000000000000000000000000000000000000000000000000000 Joules
+End Time: Wed Jun  4 12:11:57 CEST 2025
+----------------------------------------

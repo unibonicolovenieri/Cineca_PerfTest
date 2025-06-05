@@ -42,8 +42,8 @@ int main(int argc, char* argv[]) {
     }
 
     // Percorsi dei file
-    char vector1_path[] = "../generation/vector1.txt";
-    char vector2_path[] = "../generation/vector2.txt";
+    char vector1_path[] = "../../generation/vector1.txt"; 
+    char vector2_path[] = "../../generation/vector2.txt";
 
     // Vettori per ogni rank
     float vector1[VECTOR_SIZE], vector2[VECTOR_SIZE];

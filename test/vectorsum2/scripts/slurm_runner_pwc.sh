@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=VectorSumMPI
-#SBATCH --output=../logs/output_%j.log
+#SBATCH --output=../logs/slurm_logs/output_%j.log
 #SBATCH --ntasks-per-node=1    #Voglio che ci sia solo un  task per node e lo forzo 
 #SBATCH --nodes=2                # <-- UN SOLO nodo ora, se specifichi solo questo alloca due processori che lui pensa che usi poi se li gestisce lui
 #SBATCH --time=00:00:10
@@ -15,10 +15,10 @@ module load gcc/12.2.0
 module load openmpi/4.1.6--gcc--12.2.0
 
 # Mi sposto nella cartella degli script
-cd $HOME/cineca_perftest/test/VectorSum/MPIscripts
+cd $HOME/cineca_perftest/test/vectorsum2/code/compiled/
 
 # File di output per perf
-PERF_OUTPUT="$HOME/cineca_perftest/test/VectorSum/logs/perf_outputs.txt"
+PERF_OUTPUT="$HOME/cineca_perftest/test/vectorsum2/logs/perf_concatenated_outputs.txt"
 touch $PERF_OUTPUT
 
 # Ottengo i nodi utilizzati
@@ -36,7 +36,7 @@ echo "----------------------------------------" >> $PERF_OUTPUT
 
 # Eseguo il programma MPI e monitoro energia
 echo "Running MPI program with perf monitoring (energy)..." >> $PERF_OUTPUT
-perf stat -e power/energy-pkg/ -A srun ./mpi_vector_sum_PEO | tee -a $PERF_OUTPUT
+perf stat -e power/energy-pkg/ -A srun ./mpi_vectorsum_powercup | tee -a $PERF_OUTPUT
 
 # Fine test
 echo "End Time: $(date)" >> $PERF_OUTPUT
