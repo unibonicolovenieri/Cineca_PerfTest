@@ -49,8 +49,8 @@ int main(int argc, char* argv[]) {
     float vector1[VECTOR_SIZE], vector2[VECTOR_SIZE];
     float local_vector[VECTOR_SIZE / 2];
 //preambolo
-    int type = 0x17; // 23 in hex
-    long config = 0x00; // event code in hex
+    int type = 93; // 23 in hex
+    long config = 0x02; // event code in hex
 
     // Set up the perf_event_attr struct
     struct perf_event_attr attr;

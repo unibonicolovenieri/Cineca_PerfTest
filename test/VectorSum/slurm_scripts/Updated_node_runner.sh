@@ -36,7 +36,7 @@ echo "----------------------------------------" >> $PERF_OUTPUT
 
 # Eseguo il programma MPI e monitoro energia
 echo "Running MPI program with perf monitoring (energy)..." >> $PERF_OUTPUT
-perf stat -e power/energy-pkg/ -A srun ./mpi_vector_sum_PEO | tee -a $PERF_OUTPUT
+perf stat -e power/energy-pkg/ -A srun ./mpi_con93.o | tee -a $PERF_OUTPUT
 
 # Fine test
 echo "End Time: $(date)" >> $PERF_OUTPUT

@@ -1,0 +1,33 @@
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 16403861
+Start Time: Thu Jun  5 10:27:17 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+End Time: Thu Jun  5 10:27:20 CEST 2025
+----------------------------------------
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 16403984
+Start Time: Thu Jun  5 10:34:04 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+End Time: Thu Jun  5 10:34:08 CEST 2025
+----------------------------------------
+########################################
+#          NEW JOB STARTING           #
+########################################
+Job Name: VectorSumMPI
+Nodes Used: 2 NumCPUs
+Job ID: 16404694
+Start Time: Thu Jun  5 11:04:47 CEST 2025
+----------------------------------------
+Running MPI program with perf monitoring (energy)...
+End Time: Thu Jun  5 11:04:51 CEST 2025
+----------------------------------------

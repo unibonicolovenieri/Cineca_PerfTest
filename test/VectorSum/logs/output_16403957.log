@@ -1,0 +1,11 @@
+Somma totale dei vettori: 4828.7158
+Energy usage: 0.0232548494823276996612548828125000000000000000000000000000000000000000000000000000000000000000000000 Joules
+Energy usage: 0.0260946778580546379089355468750000000000000000000000000000000000000000000000000000000000000000000000 Joules
+
+ Performance counter stats for 'system wide':
+
+CPU0                   370.25 Joules power/energy-pkg/                                           
+CPU32                  400.79 Joules power/energy-pkg/                                           
+
+       2.986356090 seconds time elapsed
+
