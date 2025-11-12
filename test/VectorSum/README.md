@@ -219,6 +219,5 @@ Lo script crea una cartella `logs/mpi_logs` per separare i log dei diversi rank,
 
 Questa documentazione descrive in dettaglio il funzionamento dei tre file principali del progetto: `energy_meter.h`, `energy_meter.c`, e `mpi_energy_logger.c`, oltre allo script SLURM `run_energy_mpi.slurm`. Il progetto mira a monitorare il consumo energetico durante l'esecuzione di un'applicazione MPI su una macchina multi-socket, utilizzando i registri RAPL di Intel e strumenti come `perf` per raccogliere e scrivere i dati di energia in tempo reale.
 
-Se hai bisogno di ulteriori chiarimenti o modifiche, sono a tua disposizione!
 
 ---

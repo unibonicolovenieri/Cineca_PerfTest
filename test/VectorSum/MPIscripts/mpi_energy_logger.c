@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
         MPI_Abort(MPI_COMM_WORLD, 1);
     }
 
-    fprintf(log_file, "[Rank %d] Host: %s - Socket: %d\n", rank, hostname, meter.socket);
+    fprintf(log_file, "[Rank %d] Host: %s - Socket: %d\n", rank, hostname, meter.socket); 
     fprintf(log_file, "Inizio misurazione energia...\n");
 
     if (energy_meter_start(&meter) != 0) {

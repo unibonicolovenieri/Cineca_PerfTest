@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "sched.h": "c",
+        "dirent.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "energy_meter.h": "c"
+    }
+}
