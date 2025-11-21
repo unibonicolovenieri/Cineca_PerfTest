@@ -1,0 +1,12 @@
+----- MISURAZIONI ALL'INTERNO DI MPI -----
+Energy usage: 0.4324340820312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000 Joules
+Energy usage: 5.4122924804687500000000000000000000000000000000000000000000000000000000000000000000000000000000000000 Joules
+Somma totale dei vettori: 4828.7158
+----- MISURAZIONI RELATIVE A PERF DA Sbatch ----
+ Performance counter stats for 'system wide':
+
+CPU0                   146.09 Joules power/energy-pkg/                                           
+CPU32                  181.49 Joules power/energy-pkg/                                           
+
+       1.207670094 seconds time elapsed
+
