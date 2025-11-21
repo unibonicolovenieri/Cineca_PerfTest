@@ -4,7 +4,6 @@ Project work on analisis and testing on Cineca's Infrastructures of Perf command
 ## Struttura della cartella
 - **/docs**: Documentazione tecnica e relazioni.
 - **/tests**: Script e casi di test.
-- **/build**: File generati durante la compilazione.
 - **/master**: File Testati e Definitivi.
 
 ## Contatti
