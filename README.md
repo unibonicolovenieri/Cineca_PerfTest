@@ -8,5 +8,4 @@ Project work on analisis and testing on Cineca's Infrastructures of Perf command
 
 ## Contatti
 ### Venieri Nicolò
-- **Matricola**: 0001191498  
 - **Mail Istituzionale**: [nicolo.venieri2@studio.unibo.it](mailto:nicolo.venieri2@studio.unibo.it)
